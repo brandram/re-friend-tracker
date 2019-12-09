@@ -285,9 +285,43 @@ export class GuiModel {
                             "icon": "fa-user",
                             "color": "blue",
                             "search": true,
-                            "url": "/friend",
+							"url": "/friend",
+                            "page": "editfriendspage"
+                        },
+                    ]
+                },
+				{
+                    "id": "editfriendspage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+						{
+                            "type": "newButton",
+                            "name": "EditFriend",
+                            "icon": "fa-user",
+                            "color": "green",
+							"form": {
+								"form": "FriendForm"
+							}
+                        },
+						{
+                            "type": "newButton",
+                            "name": "AddActivity",
+                            "icon": "fa-running",
+                            "color": "green",
+							"form": {
+								"form": "AddActivityForm"
+							}
+                        },
+						{
+                            "type": "list",
+                            "icon": "fa-running",
+                            "color": "orange",
+							"search": true,
+							"url": "/friend/:friendKey/activity",
                             "form": {
-                                "form": "FriendForm"
+                                "form": "AddActivityForm"
                             }
                         },
                     ]
